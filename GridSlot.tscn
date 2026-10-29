@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://ccycij0gnu8e1"]
+
+[ext_resource type="Texture2D" uid="uid://0cyc3d7pjgc0" path="res://Gambar/Slot2.png" id="1_8n3ii"]
+[ext_resource type="Script" path="res://Slot.gd" id="1_snlq2"]
+[ext_resource type="Texture2D" uid="uid://dtplixvqr52yw" path="res://Gambar/Highlighht.png" id="2_xu313"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w4cn5"]
+size = Vector2(20.8428, 20.2324)
+
+[node name="GridSlot" type="Node2D"]
+script = ExtResource("1_snlq2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.784314)
+scale = Vector2(1, 1.002)
+texture = ExtResource("1_8n3ii")
+
+[node name="DetektorKartu" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetektorKartu"]
+position = Vector2(8.37445e-06, 0.500009)
+scale = Vector2(17.56, 24.96)
+shape = SubResource("RectangleShape2D_w4cn5")
+
+[node name="Highlight" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.352941)
+z_index = -1
+texture = ExtResource("2_xu313")

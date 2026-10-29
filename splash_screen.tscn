@@ -1,0 +1,216 @@
+[gd_scene load_steps=9 format=3 uid="uid://ci1g2v7atkpd8"]
+
+[ext_resource type="Script" path="res://splash_screen.gd" id="1_t671u"]
+[ext_resource type="Texture2D" uid="uid://vaw1sbydqgsc" path="res://Studio/Title.png" id="2_0objl"]
+[ext_resource type="Texture2D" uid="uid://cmfpmpxcfoe5e" path="res://Studio/Logo2.png" id="2_6cjct"]
+[ext_resource type="Theme" uid="uid://4mpr4iqt8jy6" path="res://MainTheme.tres" id="4_d384k"]
+
+[sub_resource type="Animation" id="Animation_862gc"]
+resource_name = "Dc"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Disclaimer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.433333, 3.86667, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_jo57j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.25, 0.25)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Title:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 804.348)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Disclaimer:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_7omle"]
+resource_name = "Splash"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(0.235, 0.235), Vector2(0.25, 0.25)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Title:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(0, 795), Vector2(0, 804.348)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.433333, 2.03333, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_020aa"]
+_data = {
+"Dc": SubResource("Animation_862gc"),
+"RESET": SubResource("Animation_jo57j"),
+"Splash": SubResource("Animation_7omle")
+}
+
+[node name="Splash_Screen" type="Node2D"]
+script = ExtResource("1_t671u")
+
+[node name="LogoGame" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="LogoGame"]
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 1392.0
+offset_bottom = 732.0
+pivot_offset = Vector2(700, 370)
+color = Color(0, 0, 0, 1)
+
+[node name="Logo" type="Sprite2D" parent="LogoGame"]
+position = Vector2(690, 288)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_6cjct")
+
+[node name="Title" type="Sprite2D" parent="LogoGame/Logo"]
+position = Vector2(0, 804.348)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_0objl")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LogoGame/Logo"]
+libraries = {
+"": SubResource("AnimationLibrary_020aa")
+}
+autoplay = "Splash"
+
+[node name="Disclaimer" type="Node2D" parent="LogoGame"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(690, 0)
+
+[node name="Headline" type="Label" parent="LogoGame/Disclaimer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = 108.0
+offset_right = 50.0
+offset_bottom = 132.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+pivot_offset = Vector2(50, 12)
+theme = ExtResource("4_d384k")
+text = "DISCLAIMER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Headline2" type="Label" parent="LogoGame/Disclaimer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = 178.0
+offset_right = 250.0
+offset_bottom = 378.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.7, 1.7)
+pivot_offset = Vector2(250, 100)
+theme = ExtResource("4_d384k")
+text = "Game ini mengandung elemen horor, termasuk jumpscare mendadak, suara keras, dan visual yang dapat mengejutkan.
+Tidak disarankan untuk pemain yang memiliki masalah jantung, epilepsi, atau mudah terkejut.
+Mainkan dengan kesadaran dan risiko Anda sendiri."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Headline3" type="Label" parent="LogoGame/Disclaimer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = 401.0
+offset_right = 250.0
+offset_bottom = 601.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.7, 1.7)
+pivot_offset = Vector2(250, 100)
+theme = ExtResource("4_d384k")
+text = "This game contains horror elements, including sudden jumpscares, loud sounds, and startling visuals.
+It is not recommended for players with heart conditions, epilepsy, or those who are easily startled.
+Play at your own awareness and risk."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

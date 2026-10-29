@@ -1,0 +1,18 @@
+# Godot 4+ specific ignores
+/android/
+.godot/
+.import/
+*.translation
+*.mono/
+*.apk
+*.aab
+*.exe
+*.zip
+*.tar.gz
+*.html
+*.js
+*.wasm
+.DS_Store
+Thumbs.db
+*.tmp
+*.log

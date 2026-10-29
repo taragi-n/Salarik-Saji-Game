@@ -1,0 +1,36 @@
+id,en,id
+KEY_SKOR,Point,Poin
+KEY_RONDE,Round,Ronde
+KEY_ROH_MURKA,Wrathful Spirit,Roh Murka
+KEY_POCONG_RULES,"Can only be placed on the edge of the grid.\n It refuses to stay at the center of the ritual.","Hanya bisa ditempatkan di pinggiran grid.\n Ia menolak berada di pusat ritual."
+KEY_KUNTI_RULES,"No card may be placed to its right.\n She is easily disturbed when something follows her.","Tidak boleh ada kartu di sebelah kanannya.\n Ia mudah terusik jika ada yang membuntutinya."
+KEY_TUYUL_RULES,"Cannot be adjacent to another Tuyul.\n They grow hostile when too close to their own kind.","Tidak boleh bersentuhan dengan Tuyul lain.\n Mereka saling membenci jika terlalu dekat."
+KEY_KUYANG_RULES,"No card may be placed directly above it.\n The path upward must remain clear, or it will rage.","Tidak boleh ada kartu tepat di atasnya.\n Jalan ke atas harus bersih, atau amarahnya akan bangkit."
+KEY_LEAK_RULES,"Must have at least two empty adjacent slots.\n It suffocates when pressed by nearby spirits.","Minimal memiliki dua slot kosong di sekelilingnya.\n Ia sesak jika terlalu banyak roh menekan dari dekat."
+KEY_SUNDELBOLONG_RULES,"Must have a card placed to its right.\n Loneliness reopens her wound.","Harus ada kartu di sebelah kanannya.\n Kesendirian membuat lukanya kembali menganga."
+KEY_GUNDULPERINGIS_RULES,"Can be placed anywhere, but must be moved every round.\n It never stays in one place for long.","Bisa ditempatkan di mana saja, namun harus dipindahkan setiap ronde.\n Ia tidak pernah betah di satu tempat."
+KEY_GENDERUWO_RULES,"Can be placed anywhere, but is immediately enraged.\n Its existence brings only chaos.","Bisa ditempatkan di mana saja, namun langsung marah.\n Keberadaannya hanya membawa kekacauan."
+KEY_BANASPATI_RULES,"Explodes and removes cards in a 3x3 area.\n Its presence is brief, violent, and final.","Meledak dan menghapus kartu di area 3x3.\n Kehadirannya singkat, ganas, dan berakhir seketika."
+KEY_TENGKORAK_RULES,"Place it on top of another spirit to remove it.\n It feeds on what remains.","Diletakkan di atas hantu lain untuk menghapusnya.\n Ia hidup dari sisa yang tertinggal."
+KEY_SUSTERNGESOT_RULES,"Calms nearby spirits.\n Her presence soothes the spreading unrest.","Menenangkan hantu di sekitarnya.\n Kehadirannya meredam kegelisahan yang menyebar."
+KEY_POCONG,Pocong,Pocong
+KEY_TUYUL,Tuyul,Tuyul
+KEY_KUNTI,Kuntilanak,Kuntilanak
+KEY_KUYANG,Kuyang,Kuyang
+KEY_LEAK,Leak,Leak
+KEY_SUNDELBOLONG,Sundel Bolong,Sundel Bolong
+KEY_GUNDULPERINGIS,Gundul Peringis,Gundul Peringis
+KEY_GENDERUWO,Genderuwo,Genderuwo
+KEY_BANASPATI,Banaspati,Banaspati
+KEY_TENGKORAK,Skeleton,Tengkorak
+KEY_SUSTERNGESOT,Suster Ngesot,Suster Ngesot
+KEY_KLIK_KARTU_DEFAULT,Click a card to see its rules,Klik kartu untuk melihat aturannya
+KEY_RITUAL_SAJI," "," "
+KEY_INFO_HAPUS_KARTU,Click a card to remove it at a cost of 50 points,Klik kartu untuk menghapusnya dengan biaya 50 poin
+KEY_SESI_PEMBERSIHAN,Cleanup Phase,Fase Pembersihan
+KEY_FINISH,FINISH,SELESAI
+KEY_NEXT,NEXT,LANJUT
+KEY_START,Tap to start the ritual,Tap untuk memulai ritual
+KEY_SETTING,SETTINGS,PENGATURAN
+KEY_HIGH,Highest Round :,Ronde Tertinggi :
+KEY_GAMEOVER,Ritual Failure,Ritual Gagal

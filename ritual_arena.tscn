@@ -1,0 +1,1274 @@
+[gd_scene load_steps=75 format=3 uid="uid://d321gc0et3kye"]
+
+[ext_resource type="PackedScene" uid="uid://ccycij0gnu8e1" path="res://GridSlot.tscn" id="1_83wny"]
+[ext_resource type="Script" path="res://RitualArena.gd" id="1_apg73"]
+[ext_resource type="Texture2D" uid="uid://c0msp70544wiw" path="res://Gambar/Background_Ritual2.png" id="3_12mwo"]
+[ext_resource type="AudioStream" uid="uid://cauqu5vdve4ms" path="res://SFX/Klik_Play.ogg" id="3_p2nhf"]
+[ext_resource type="PackedScene" uid="uid://dd4c7pueqm1qq" path="res://KartuRoh.tscn" id="3_qfaef"]
+[ext_resource type="PackedScene" uid="uid://d4ifp8j74v50m" path="res://JumpscareUI.tscn" id="4_hgisl"]
+[ext_resource type="Theme" uid="uid://4mpr4iqt8jy6" path="res://MainTheme.tres" id="4_io83p"]
+[ext_resource type="Texture2D" uid="uid://cn3qva88f4lkg" path="res://Gambar/Fire/Fire1.png" id="4_xlhfd"]
+[ext_resource type="Texture2D" uid="uid://b167swlqsh7qu" path="res://UI/Panel_Information2.png" id="5_7fcjt"]
+[ext_resource type="Texture2D" uid="uid://cvptdgvngesor" path="res://Gambar/Fire/Fire2.png" id="5_774kw"]
+[ext_resource type="Texture2D" uid="uid://82fq41jlcy4n" path="res://UI/Button_Finish_default.png" id="5_kectp"]
+[ext_resource type="Texture2D" uid="uid://cqt6lnck366hj" path="res://Gambar/Gundul.png" id="6_mqkkv"]
+[ext_resource type="Texture2D" uid="uid://dy5wj3c1ufwcu" path="res://UI/Button_Finish_Press.png" id="6_qp5dn"]
+[ext_resource type="Texture2D" uid="uid://bnkj57w3qeg5r" path="res://Gambar/Back_cover_stack.png" id="6_rmqs8"]
+[ext_resource type="Texture2D" uid="uid://bq2hoesbucw0l" path="res://Gambar/Fire/Fire3.png" id="6_wusjr"]
+[ext_resource type="Texture2D" uid="uid://cyyyc53eeh7vo" path="res://UI/Button_Finish_Lock.png" id="7_fpsye"]
+[ext_resource type="Script" path="res://button.gd" id="7_loip1"]
+[ext_resource type="Texture2D" uid="uid://braldmjxb1kjd" path="res://Gambar/Fire/Fire4.png" id="7_qnlk3"]
+[ext_resource type="Texture2D" uid="uid://bbqgovpul8ksb" path="res://Gambar/Fire/Fire5.png" id="8_75efn"]
+[ext_resource type="Texture2D" uid="uid://bn6xcfrb5as0" path="res://Gambar/Fire/Fire6.png" id="9_5q186"]
+[ext_resource type="Texture2D" uid="uid://dl3716sq1q2ft" path="res://Gambar/Fire/Fire7.png" id="10_kryts"]
+[ext_resource type="Texture2D" uid="uid://dx837yks3wxik" path="res://Gambar/PanelInfo3.png" id="11_4m35u"]
+[ext_resource type="Shader" path="res://Smoke.gdshader" id="11_usa4r"]
+[ext_resource type="Texture2D" uid="uid://dljllqprm7n3h" path="res://Gambar/Fire/Smoke.png" id="12_7nl5o"]
+[ext_resource type="Texture2D" uid="uid://b2q5duwwmm4fv" path="res://Gambar/Fire/Smoke2.png" id="12_kw8tj"]
+[ext_resource type="Texture2D" uid="uid://dp5qxaw4pumfj" path="res://Gambar/Black.png" id="16_67mm8"]
+[ext_resource type="Texture2D" uid="uid://d1f08xmdvfkeb" path="res://Gambar/PauseButton1.png" id="20_shtcr"]
+[ext_resource type="Texture2D" uid="uid://bc45dc4vlxor5" path="res://Gambar/PauseButton2.png" id="21_vjfo0"]
+[ext_resource type="Texture2D" uid="uid://cq51qntakuae8" path="res://Gambar/BorderBlack.png" id="22_rfdii"]
+[ext_resource type="Texture2D" uid="uid://cid5ob514q06d" path="res://UI/Over.png" id="23_c5vh3"]
+[ext_resource type="Texture2D" uid="uid://y8pe4h8em27s" path="res://UI/Progress.png" id="24_tr2tm"]
+[ext_resource type="Texture2D" uid="uid://bq8pohvcp5cqc" path="res://Gambar/Title.png" id="27_iy5j3"]
+[ext_resource type="Texture2D" uid="uid://bw6d76673mud2" path="res://icon.svg" id="28_xpksp"]
+[ext_resource type="Script" path="res://MainMenuUI.gd" id="32_0l2cy"]
+[ext_resource type="Texture2D" uid="uid://c6hy70fqi8mbb" path="res://UI/Setting_button2.png" id="33_kv15r"]
+[ext_resource type="Texture2D" uid="uid://c2tg4xa1j5kv0" path="res://Gambar/Dark.png" id="33_ycgd2"]
+[ext_resource type="Texture2D" uid="uid://crtj5ax1wba0h" path="res://UI/Setting_button1.png" id="34_40d6m"]
+[ext_resource type="Texture2D" uid="uid://d8xapwgxlycu" path="res://UI/Music_off.png" id="34_pb0af"]
+[ext_resource type="Texture2D" uid="uid://qh052haxpeoe" path="res://UI/Panel_setting.png" id="36_0wscg"]
+[ext_resource type="Texture2D" uid="uid://bci5xuhp2awxj" path="res://UI/Sound_off.png" id="36_dq6o3"]
+[ext_resource type="Texture2D" uid="uid://3mwhdhgl4rwi" path="res://UI/Credits_button1.png" id="40_nlrf2"]
+[ext_resource type="Texture2D" uid="uid://ckn0lm7j0wx54" path="res://UI/Credits_button2.png" id="41_2rwco"]
+[ext_resource type="Texture2D" uid="uid://b0g2nq1l7yp6t" path="res://UI/Sound_on.png" id="42_nbkm1"]
+[ext_resource type="AudioStream" uid="uid://cmwievtkr6cgu" path="res://Music/Music_Ritual.ogg" id="42_oiwpk"]
+[ext_resource type="Texture2D" uid="uid://c5833iwhhbvl5" path="res://UI/Id_normal2.png" id="42_u2oy8"]
+[ext_resource type="Texture2D" uid="uid://rgmcy4hfs7gn" path="res://UI/Id_active2.png" id="43_qb8pa"]
+[ext_resource type="Texture2D" uid="uid://5xn04jffp7rk" path="res://UI/Music_on.png" id="43_v8pou"]
+[ext_resource type="Texture2D" uid="uid://cnmb71o011nwj" path="res://UI/En_normal2.png" id="44_7k5s5"]
+[ext_resource type="Texture2D" uid="uid://dkl6u236dmua4" path="res://UI/En_active2.png" id="45_k5lvt"]
+[ext_resource type="Texture2D" uid="uid://coq7mqohw0llp" path="res://UI/Panel_setting2.png" id="46_1ah2w"]
+[ext_resource type="Texture2D" uid="uid://ncq4vc0pa58t" path="res://UI/Close_Button.png" id="46_rhbv1"]
+[ext_resource type="Texture2D" uid="uid://bii1yni8044f1" path="res://UI/Close_Button2.png" id="47_uqgix"]
+[ext_resource type="AudioStream" uid="uid://drpgw2q1m6bu0" path="res://SFX/Klik.ogg" id="51_qx7xu"]
+[ext_resource type="Texture2D" uid="uid://cxddf5h3x5g8u" path="res://UI/Panel_pause.png" id="53_fy2mf"]
+[ext_resource type="Texture2D" uid="uid://dl5qcg5bnxugf" path="res://UI/Resume_button1.png" id="54_yspgv"]
+[ext_resource type="Texture2D" uid="uid://c4lrql1yj5k4f" path="res://UI/Resume_button2.png" id="55_fc8g5"]
+[ext_resource type="Texture2D" uid="uid://bulgmr0lowo8u" path="res://UI/Replay_button1.png" id="56_audrd"]
+[ext_resource type="Texture2D" uid="uid://dw1nyc1vvqt85" path="res://UI/Replay_button2.png" id="57_r70my"]
+[ext_resource type="Texture2D" uid="uid://enpx70jgatr8" path="res://UI/Home_button1.png" id="58_7rrm8"]
+[ext_resource type="Texture2D" uid="uid://ccbc1jcf6871a" path="res://UI/Home_button2.png" id="59_fpplj"]
+
+[sub_resource type="Animation" id="Animation_lghmd"]
+resource_name = "Fire"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("4_xlhfd"), ExtResource("5_774kw"), ExtResource("6_wusjr"), ExtResource("7_qnlk3"), ExtResource("8_75efn"), ExtResource("9_5q186"), ExtResource("10_kryts"), ExtResource("4_xlhfd")]
+}
+
+[sub_resource type="Animation" id="Animation_uaxtm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_xlhfd")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bbann"]
+_data = {
+"Fire": SubResource("Animation_lghmd"),
+"RESET": SubResource("Animation_uaxtm")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_56e0a"]
+resource_local_to_scene = true
+shader = ExtResource("11_usa4r")
+shader_parameter/scroll_speed = 0.15
+shader_parameter/bottom_width = 0.116
+shader_parameter/top_width = 0.882
+shader_parameter/taper_power = 2.534
+shader_parameter/fade_top = 0.5
+shader_parameter/fade_bottom = 0.206
+shader_parameter/sway_strength = 0.02
+shader_parameter/sway_speed = 2.0
+shader_parameter/smoke_texture = ExtResource("12_kw8tj")
+
+[sub_resource type="Animation" id="Animation_7j1ka"]
+resource_name = "Dark"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1.64179, 1.64179), Vector2(1.702, 1.702), Vector2(1.64179, 1.64179)]
+}
+
+[sub_resource type="Animation" id="Animation_0m4q4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.64179, 1.64179)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bhmhm"]
+_data = {
+"Dark": SubResource("Animation_7j1ka"),
+"RESET": SubResource("Animation_0m4q4")
+}
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aquk6"]
+texture = ExtResource("11_4m35u")
+
+[sub_resource type="Animation" id="Animation_dbwlq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(690, 258)]
+}
+
+[sub_resource type="Animation" id="Animation_wt0f8"]
+resource_name = "Title"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(690, 265), Vector2(690, 270), Vector2(690, 273), Vector2(690, 275), Vector2(690, 270), Vector2(690, 268), Vector2(690, 265)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gdcd1"]
+_data = {
+"RESET": SubResource("Animation_dbwlq"),
+"Title": SubResource("Animation_wt0f8")
+}
+
+[sub_resource type="Animation" id="Animation_wamef"]
+resource_name = "Play"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_052vb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1obtb"]
+_data = {
+"Play": SubResource("Animation_wamef"),
+"RESET": SubResource("Animation_052vb")
+}
+
+[node name="RitualArena" type="Node2D" node_paths=PackedStringArray("canvas_main_menu", "canvas_ui", "grid_slot")]
+position = Vector2(63, 40)
+script = ExtResource("1_apg73")
+kartu_scene = ExtResource("3_qfaef")
+canvas_main_menu = NodePath("MainMenu")
+canvas_ui = NodePath("CanvasLayer")
+grid_slot = NodePath("GridSlot")
+sfx_klik_play = ExtResource("3_p2nhf")
+sfx_klik = ExtResource("51_qx7xu")
+
+[node name="Background" type="Sprite2D" parent="."]
+modulate = Color(0.775063, 0.775063, 0.775063, 1)
+z_index = -1
+position = Vector2(624, 342)
+scale = Vector2(0.67, 0.67)
+texture = ExtResource("3_12mwo")
+
+[node name="Fire" type="Sprite2D" parent="Background"]
+position = Vector2(855.224, -258.209)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("4_xlhfd")
+
+[node name="FireAnim" type="AnimationPlayer" parent="Background/Fire"]
+libraries = {
+"": SubResource("AnimationLibrary_bbann")
+}
+autoplay = "Fire"
+
+[node name="Smoke" type="Sprite2D" parent="Background"]
+material = SubResource("ShaderMaterial_56e0a")
+position = Vector2(-791.045, -404.478)
+rotation = -0.0804561
+texture = ExtResource("12_7nl5o")
+
+[node name="Smoke2" type="Sprite2D" parent="Background"]
+material = SubResource("ShaderMaterial_56e0a")
+position = Vector2(874.627, -252.239)
+rotation = 0.245025
+scale = Vector2(-1.2, 1.2)
+texture = ExtResource("12_7nl5o")
+
+[node name="Dark" type="Sprite2D" parent="Background"]
+modulate = Color(1, 1, 1, 0.325)
+position = Vector2(855.224, -222.388)
+scale = Vector2(1.64179, 1.64179)
+texture = ExtResource("33_ycgd2")
+
+[node name="DarkAnim" type="AnimationPlayer" parent="Background/Dark"]
+libraries = {
+"": SubResource("AnimationLibrary_bhmhm")
+}
+autoplay = "Dark"
+speed_scale = 4.0
+
+[node name="GridSlot" type="Node2D" parent="."]
+
+[node name="Slot_r0_c0" parent="GridSlot" instance=ExtResource("1_83wny")]
+position = Vector2(358, 103)
+rotation = -0.0574189
+scale = Vector2(0.25, 0.25)
+
+[node name="Slot_r0_c1" parent="GridSlot" instance=ExtResource("1_83wny")]
+position = Vector2(464, 99)
+rotation = -0.0265363
+scale = Vector2(0.25, 0.25)
+
+[node name="Slot_r0_c2" parent="GridSlot" instance=ExtResource("1_83wny")]
+position = Vector2(568, 96)
+rotation = -0.00430923
+scale = Vector2(0.25, 0.25)
+
+[node name="Slot_r0_c3" parent="GridSlot" instance=ExtResource("1_83wny")]
+position = Vector2(674, 96)
+rotation = -0.00430923
+scale = Vector2(0.25, 0.25)
+
+[node name="Slot_r0_c4" parent="GridSlot" instance=ExtResource("1_83wny")]
+position = Vector2(778, 98)
+rotation = 0.0261799
+scale = Vector2(0.25, 0.25)
+
+[node name="Slot_r0_c5" parent="GridSlot" instance=ExtResource("1_83wny")]
+position = Vector2(886, 105)
+rotation = 0.0575959
+scale = Vector2(0.25, 0.25)
+
+[node name="Slot_r1_c0" parent="GridSlot" instance=ExtResource("1_83wny")]
+position = Vector2(355, 239)
+rotation = -0.0574189
+scale = Vector2(0.25, 0.25)
+
+[node name="Slot_r1_c1" parent="GridSlot" instance=ExtResource("1_83wny")]
+position = Vector2(461, 235)
+rotation = -0.0265363
+scale = Vector2(0.25, 0.25)
+
+[node name="Slot_r1_c2" parent="GridSlot" instance=ExtResource("1_83wny")]
+position = Vector2(565, 232)
+rotation = -0.00430923
+scale = Vector2(0.25, 0.25)
+
+[node name="Slot_r1_c3" parent="GridSlot" instance=ExtResource("1_83wny")]
+position = Vector2(671, 232)
+rotation = -0.00430923
+scale = Vector2(0.25, 0.25)
+
+[node name="Slot_r1_c4" parent="GridSlot" instance=ExtResource("1_83wny")]
+position = Vector2(775, 234)
+rotation = 0.0261799
+scale = Vector2(0.25, 0.25)
+
+[node name="Slot_r1_c5" parent="GridSlot" instance=ExtResource("1_83wny")]
+position = Vector2(883, 241)
+rotation = 0.0575959
+scale = Vector2(0.25, 0.25)
+
+[node name="Slot_r2_c0" parent="GridSlot" instance=ExtResource("1_83wny")]
+position = Vector2(353, 373)
+rotation = -0.0574189
+scale = Vector2(0.25, 0.25)
+
+[node name="Slot_r2_c1" parent="GridSlot" instance=ExtResource("1_83wny")]
+position = Vector2(459, 369)
+rotation = -0.0265363
+scale = Vector2(0.25, 0.25)
+
+[node name="Slot_r2_c2" parent="GridSlot" instance=ExtResource("1_83wny")]
+position = Vector2(563, 366)
+rotation = -0.00430923
+scale = Vector2(0.25, 0.25)
+
+[node name="Slot_r2_c3" parent="GridSlot" instance=ExtResource("1_83wny")]
+position = Vector2(669, 366)
+rotation = -0.00430923
+scale = Vector2(0.25, 0.25)
+
+[node name="Slot_r2_c4" parent="GridSlot" instance=ExtResource("1_83wny")]
+position = Vector2(773, 368)
+rotation = 0.0261799
+scale = Vector2(0.25, 0.25)
+
+[node name="Slot_r2_c5" parent="GridSlot" instance=ExtResource("1_83wny")]
+position = Vector2(881, 375)
+rotation = 0.0575959
+scale = Vector2(0.25, 0.25)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HUD" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1228.0
+offset_bottom = -557.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_io83p")
+metadata/_edit_use_anchors_ = true
+
+[node name="PanelInformation" type="Sprite2D" parent="CanvasLayer/HUD"]
+position = Vector2(216.125, 105.125)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("5_7fcjt")
+
+[node name="LabelAmarah" type="Label" parent="CanvasLayer/HUD"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.987665
+anchor_top = 0.614264
+anchor_right = 0.987665
+anchor_bottom = 0.614264
+offset_left = 5.0
+offset_top = 41.0
+offset_right = 130.0
+offset_bottom = 65.0
+pivot_offset = Vector2(60, 12)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Roh Murka: 0/3"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="TombolSelesai" type="TextureButton" parent="CanvasLayer/HUD"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 7.14774
+anchor_top = 2.60105
+anchor_right = 8.62874
+anchor_bottom = 2.93205
+offset_left = 35.5439
+offset_top = 10.029
+offset_right = -39.5681
+offset_bottom = -7.92401
+grow_horizontal = 2
+scale = Vector2(1.5, 1.5)
+pivot_offset = Vector2(75, 18)
+texture_normal = ExtResource("5_kectp")
+texture_pressed = ExtResource("6_qp5dn")
+texture_disabled = ExtResource("7_fpsye")
+metadata/_edit_use_anchors_ = true
+
+[node name="LabelTombol" type="Label" parent="CanvasLayer/HUD/TombolSelesai"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -12.0
+offset_right = 60.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.1, 1.1)
+pivot_offset = Vector2(60, 12)
+theme_override_colors/font_color = Color(0.10748, 0.10748, 0.10748, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="LabelRonde" type="Label" parent="CanvasLayer/HUD"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -5.93338
+anchor_top = 0.160276
+anchor_right = -5.93338
+anchor_bottom = 0.160276
+offset_left = 1074.0
+offset_top = 27.0
+offset_right = 1144.0
+offset_bottom = 51.0
+scale = Vector2(1.5, 1.5)
+pivot_offset = Vector2(35, 12)
+text = "Ronde: 1
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="PauseButton" type="TextureButton" parent="CanvasLayer/HUD"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.106086
+anchor_top = -0.0237732
+anchor_right = 0.106086
+anchor_bottom = -0.0237732
+offset_left = 31.0
+offset_top = 52.0
+offset_right = 104.0
+offset_bottom = 125.0
+scale = Vector2(1.25, 1.25)
+pivot_offset = Vector2(36.5, 36.5)
+texture_normal = ExtResource("20_shtcr")
+texture_pressed = ExtResource("21_vjfo0")
+metadata/_edit_use_anchors_ = true
+
+[node name="PosisiTangan" type="Marker2D" parent="CanvasLayer"]
+position = Vector2(690, 567)
+
+[node name="PanelInfo" type="Panel" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.743522
+anchor_right = 0.986957
+anchor_bottom = 0.579167
+offset_left = 10.9399
+offset_top = 107.0
+offset_right = -5.00049
+offset_bottom = -42.0002
+grow_horizontal = 2
+pivot_offset = Vector2(160, 50)
+theme = ExtResource("4_io83p")
+theme_override_styles/panel = SubResource("StyleBoxTexture_aquk6")
+metadata/_edit_use_anchors_ = true
+
+[node name="LabelAturan" type="Label" parent="CanvasLayer/PanelInfo"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.559702
+anchor_right = 0.5
+anchor_bottom = 0.559702
+offset_left = -125.0
+offset_top = -50.0
+offset_right = 125.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(125, 50)
+theme_override_font_sizes/font_size = 20
+text = "Klik Kartu untuk 
+melihat aturannya"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="LabelNama" type="Label" parent="CanvasLayer/PanelInfo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -100.0
+offset_top = 39.0
+offset_right = 100.0
+offset_bottom = 63.0
+grow_horizontal = 2
+scale = Vector2(1.5, 1.5)
+pivot_offset = Vector2(100, 12)
+text = "POCONG"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="LabelSkor" type="Label" parent="CanvasLayer/PanelInfo"]
+layout_mode = 0
+offset_left = -878.875
+offset_top = -4.87503
+offset_right = -798.875
+offset_bottom = 19.125
+scale = Vector2(1.2, 1.2)
+pivot_offset = Vector2(40, 12)
+theme = ExtResource("4_io83p")
+text = "KEY_SKOR
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="BilahWaktu" type="TextureProgressBar" parent="CanvasLayer/PanelInfo"]
+layout_mode = 0
+offset_left = -0.000244141
+offset_top = 269.0
+offset_right = 320.0
+offset_bottom = 299.0
+pivot_offset = Vector2(160, 15)
+texture_under = ExtResource("23_c5vh3")
+texture_progress = ExtResource("24_tr2tm")
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="CanvasLayer"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(1052, 28.0001)
+scale = Vector2(5, 5)
+texture_normal = ExtResource("28_xpksp")
+
+[node name="JumpscareUI" parent="." instance=ExtResource("4_hgisl")]
+visible = false
+
+[node name="Stack" type="Sprite2D" parent="."]
+position = Vector2(203, 514)
+rotation = 0.1112
+scale = Vector2(-0.25, 0.25)
+texture = ExtResource("6_rmqs8")
+
+[node name="Shadow" type="Sprite2D" parent="Stack"]
+modulate = Color(0, 0, 0, 0.235294)
+z_index = -1
+position = Vector2(-18.5645, 22.0763)
+scale = Vector2(1, 1.05)
+texture = ExtResource("6_rmqs8")
+
+[node name="Button" type="Button" parent="."]
+visible = false
+modulate = Color(0, 0, 0, 1)
+offset_left = 1006.0
+offset_top = 180.0
+offset_right = 1364.0
+offset_bottom = 688.0
+scale = Vector2(0.5, 0.1)
+icon = ExtResource("6_mqkkv")
+script = ExtResource("7_loip1")
+metadata/_edit_use_anchors_ = true
+
+[node name="KameraArena" type="Camera2D" parent="."]
+position = Vector2(624, 322)
+
+[node name="Black" type="CanvasLayer" parent="."]
+
+[node name="Black" type="Sprite2D" parent="Black"]
+visible = false
+position = Vector2(690, 362)
+scale = Vector2(1.89946, 1.78744)
+texture = ExtResource("16_67mm8")
+
+[node name="BorderBlack" type="Sprite2D" parent="Black"]
+position = Vector2(690, 360)
+texture = ExtResource("22_rfdii")
+
+[node name="MainMenu" type="CanvasLayer" parent="." node_paths=PackedStringArray("canvas_setting", "canvas_credits", "btn_id", "btn_en", "btn_music", "btn_sfx", "label_highscore")]
+script = ExtResource("32_0l2cy")
+canvas_setting = NodePath("../Setting")
+canvas_credits = NodePath("../Credits")
+btn_id = NodePath("../Setting/PanelSetting/IdButton")
+btn_en = NodePath("../Setting/PanelSetting/EnButton")
+tex_music_on = ExtResource("43_v8pou")
+tex_music_off = ExtResource("34_pb0af")
+tex_sound_on = ExtResource("42_nbkm1")
+tex_sound_off = ExtResource("36_dq6o3")
+btn_music = NodePath("../Setting/PanelSetting/MusicButton")
+btn_sfx = NodePath("../Setting/PanelSetting/SoundButton")
+label_highscore = NodePath("../Setting/PanelSetting/PanelSetting2/Highscore")
+sfx_klik = ExtResource("51_qx7xu")
+
+[node name="Title" type="Sprite2D" parent="MainMenu"]
+position = Vector2(690, 258)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("27_iy5j3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MainMenu/Title"]
+libraries = {
+"": SubResource("AnimationLibrary_gdcd1")
+}
+autoplay = "Title"
+
+[node name="PlayButton" type="TextureButton" parent="MainMenu"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = 134.0
+offset_right = 250.0
+offset_bottom = 284.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(250, 72.5)
+
+[node name="LabelPlay" type="Label" parent="MainMenu/PlayButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -125.0
+offset_top = -12.0
+offset_right = 125.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
+pivot_offset = Vector2(125, 12)
+theme = ExtResource("4_io83p")
+text = "KEY_START"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="AnimationPlay" type="AnimationPlayer" parent="MainMenu/PlayButton/LabelPlay"]
+libraries = {
+"": SubResource("AnimationLibrary_1obtb")
+}
+autoplay = "Play"
+
+[node name="SettingButton" type="TextureButton" parent="MainMenu"]
+offset_left = 35.0
+offset_top = 35.0
+offset_right = 89.0
+offset_bottom = 91.0
+scale = Vector2(1.25, 1.25)
+pivot_offset = Vector2(27, 28)
+texture_normal = ExtResource("33_kv15r")
+texture_pressed = ExtResource("34_40d6m")
+
+[node name="CreditsButton" type="TextureButton" parent="MainMenu"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -89.0
+offset_top = 35.0
+offset_right = -35.0
+offset_bottom = 91.0
+grow_horizontal = 0
+scale = Vector2(1.25, 1.25)
+pivot_offset = Vector2(27, 28)
+texture_normal = ExtResource("40_nlrf2")
+texture_pressed = ExtResource("41_2rwco")
+
+[node name="MusicRitual" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("42_oiwpk")
+autoplay = true
+bus = &"Music"
+
+[node name="Setting" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="Setting"]
+modulate = Color(1, 1, 1, 0.364706)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -700.0
+offset_top = -370.0
+offset_right = 700.0
+offset_bottom = 370.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="PanelSetting" type="Sprite2D" parent="Setting"]
+position = Vector2(690, 332)
+texture = ExtResource("36_0wscg")
+
+[node name="Label" type="Label" parent="Setting/PanelSetting"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -432.0
+offset_top = -410.0
+offset_right = -332.0
+offset_bottom = -384.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.2, 2.2)
+pivot_offset = Vector2(50, 13)
+theme = ExtResource("4_io83p")
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+text = "KEY_SETTING"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="IdButton" type="TextureButton" parent="Setting/PanelSetting"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -642.0
+offset_top = -355.0
+offset_right = -402.0
+offset_bottom = -215.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+pivot_offset = Vector2(130, 80)
+texture_normal = ExtResource("42_u2oy8")
+texture_disabled = ExtResource("43_qb8pa")
+
+[node name="Label" type="Label" parent="Setting/PanelSetting/IdButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = 79.75
+offset_right = 50.0
+offset_bottom = 103.75
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
+pivot_offset = Vector2(50, 12)
+theme = ExtResource("4_io83p")
+text = "Indonesia"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="EnButton" type="TextureButton" parent="Setting/PanelSetting"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -362.0
+offset_top = -355.0
+offset_right = -122.0
+offset_bottom = -215.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+pivot_offset = Vector2(130, 80)
+texture_normal = ExtResource("44_7k5s5")
+texture_disabled = ExtResource("45_k5lvt")
+
+[node name="Label2" type="Label" parent="Setting/PanelSetting/EnButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = 79.75
+offset_right = 50.0
+offset_bottom = 103.75
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
+pivot_offset = Vector2(50, 12)
+theme = ExtResource("4_io83p")
+text = "English"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="SoundButton" type="TextureButton" parent="Setting/PanelSetting"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -597.0
+offset_top = -188.0
+offset_right = -447.0
+offset_bottom = -38.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7, 0.7)
+pivot_offset = Vector2(75, 75)
+texture_normal = ExtResource("42_nbkm1")
+
+[node name="MusicButton" type="TextureButton" parent="Setting/PanelSetting"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -317.0
+offset_top = -188.0
+offset_right = -167.0
+offset_bottom = -38.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7, 0.7)
+pivot_offset = Vector2(75, 75)
+texture_normal = ExtResource("43_v8pou")
+
+[node name="PanelSetting2" type="Sprite2D" parent="Setting/PanelSetting"]
+position = Vector2(0, 266)
+texture = ExtResource("46_1ah2w")
+
+[node name="Highscore" type="Label" parent="Setting/PanelSetting/PanelSetting2"]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -589.0
+offset_top = -49.5
+offset_right = -469.0
+offset_bottom = -25.5
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(1.8, 1.8)
+pivot_offset = Vector2(60, 12)
+theme = ExtResource("4_io83p")
+text = "0 RONDE"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Highscore2" type="Label" parent="Setting/PanelSetting/PanelSetting2"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -677.0
+offset_top = -49.5
+offset_right = -557.0
+offset_bottom = -25.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.8, 1.8)
+pivot_offset = Vector2(60, 12)
+theme = ExtResource("4_io83p")
+text = "KEY_HIGH"
+vertical_alignment = 1
+
+[node name="SettingBackButton" type="TextureButton" parent="Setting"]
+offset_left = 1041.0
+offset_top = 85.0
+offset_right = 1095.0
+offset_bottom = 141.0
+scale = Vector2(1.25, 1.25)
+pivot_offset = Vector2(27, 28)
+texture_normal = ExtResource("46_rhbv1")
+texture_pressed = ExtResource("47_uqgix")
+
+[node name="Credits" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="ColorRect2" type="ColorRect" parent="Credits"]
+modulate = Color(1, 1, 1, 0.364706)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -700.0
+offset_top = -370.0
+offset_right = 700.0
+offset_bottom = 370.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="PanelSetting" type="Sprite2D" parent="Credits"]
+position = Vector2(670, 320)
+texture = ExtResource("36_0wscg")
+
+[node name="Label" type="Label" parent="Credits/PanelSetting"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -482.0
+offset_top = -410.0
+offset_right = -282.0
+offset_bottom = -360.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.2, 2.2)
+pivot_offset = Vector2(100, 25)
+theme = ExtResource("4_io83p")
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+text = "SANDEKARYA STUDIO"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="Credits/PanelSetting"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -482.0
+offset_top = -63.0
+offset_right = -282.0
+offset_bottom = -13.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.4, 1.4)
+pivot_offset = Vector2(100, 25)
+theme = ExtResource("4_io83p")
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+text = "v1.0.0"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Credits/PanelSetting"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -632.0
+offset_top = -299.0
+offset_right = -482.0
+offset_bottom = -249.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.4, 1.4)
+pivot_offset = Vector2(75, 25)
+theme = ExtResource("4_io83p")
+bbcode_enabled = true
+text = "[center][color=yellow]Programming[/color][/center]
+[center][font_size=5] [/font_size][/center]
+[center][color=white]Gyntara Dwi Novelan[/color]
+"
+scroll_active = false
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="Credits/PanelSetting"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -282.0
+offset_top = -299.0
+offset_right = -132.0
+offset_bottom = -249.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.4, 1.4)
+pivot_offset = Vector2(75, 25)
+theme = ExtResource("4_io83p")
+bbcode_enabled = true
+text = "[center][color=yellow]Music & SFX[/color][/center]
+[center][font_size=5] [/font_size][/center]
+[center][color=white]Pixabay & Mixkit[/color]
+"
+scroll_active = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Credits/PanelSetting"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -632.0
+offset_top = -185.0
+offset_right = -482.0
+offset_bottom = -135.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.4, 1.4)
+pivot_offset = Vector2(75, 25)
+theme = ExtResource("4_io83p")
+bbcode_enabled = true
+text = "[center][color=yellow]Graphics[/color][/center]
+[center][font_size=5] [/font_size][/center]
+[center][color=white]Gyntara Dwi Novelan[/color]
+"
+scroll_active = false
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="Credits/PanelSetting"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -282.0
+offset_top = -185.0
+offset_right = -132.0
+offset_bottom = -135.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.4, 1.4)
+pivot_offset = Vector2(75, 25)
+theme = ExtResource("4_io83p")
+bbcode_enabled = true
+text = "[center][color=yellow]Game Tester[/color][/center]
+[center][font_size=5] [/font_size][/center]
+[center][color=white]Sindi Faila Suci[/color]
+"
+scroll_active = false
+
+[node name="SettingBackButton2" type="TextureButton" parent="Credits"]
+offset_left = 1020.0
+offset_top = 85.0
+offset_right = 1074.0
+offset_bottom = 141.0
+scale = Vector2(1.25, 1.25)
+pivot_offset = Vector2(27, 28)
+texture_normal = ExtResource("46_rhbv1")
+texture_pressed = ExtResource("47_uqgix")
+
+[node name="Click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("51_qx7xu")
+
+[node name="PauseCanvas" type="CanvasLayer" parent="."]
+process_mode = 3
+visible = false
+
+[node name="PanelSetting" type="Sprite2D" parent="PauseCanvas"]
+position = Vector2(690, 333)
+texture = ExtResource("53_fy2mf")
+
+[node name="ColorRect3" type="ColorRect" parent="PauseCanvas/PanelSetting"]
+modulate = Color(1, 1, 1, 0.364706)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -977.5
+offset_top = -515.5
+offset_right = 422.5
+offset_bottom = 224.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ResumeBackButton3" type="TextureButton" parent="PauseCanvas/PanelSetting"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -196.5
+offset_top = -122.5
+offset_right = -142.5
+offset_bottom = -66.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.25, 1.25)
+pivot_offset = Vector2(27, 28)
+texture_normal = ExtResource("54_yspgv")
+texture_pressed = ExtResource("55_fc8g5")
+
+[node name="RestartButton" type="TextureButton" parent="PauseCanvas/PanelSetting"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -304.5
+offset_top = -122.5
+offset_right = -250.5
+offset_bottom = -66.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.25, 1.25)
+pivot_offset = Vector2(27, 28)
+texture_normal = ExtResource("56_audrd")
+texture_pressed = ExtResource("57_r70my")
+
+[node name="HomeButton" type="TextureButton" parent="PauseCanvas/PanelSetting"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -412.5
+offset_top = -122.5
+offset_right = -358.5
+offset_bottom = -66.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.25, 1.25)
+pivot_offset = Vector2(27, 28)
+texture_normal = ExtResource("58_7rrm8")
+texture_pressed = ExtResource("59_fpplj")
+
+[node name="Label" type="Label" parent="PauseCanvas/PanelSetting"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -297.5
+offset_top = -287.5
+offset_right = -257.5
+offset_bottom = -263.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.2, 2.2)
+pivot_offset = Vector2(20, 12)
+theme = ExtResource("4_io83p")
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+text = "PAUSED"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="GameOverCanvas" type="CanvasLayer" parent="."]
+process_mode = 3
+
+[node name="PanelSetting" type="Sprite2D" parent="GameOverCanvas"]
+position = Vector2(690, 333)
+texture = ExtResource("53_fy2mf")
+
+[node name="ColorRect3" type="ColorRect" parent="GameOverCanvas/PanelSetting"]
+modulate = Color(1, 1, 1, 0.364706)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -977.5
+offset_top = -515.5
+offset_right = 422.5
+offset_bottom = 224.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="RestartButton" type="TextureButton" parent="GameOverCanvas/PanelSetting"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -271.5
+offset_top = -122.5
+offset_right = -217.5
+offset_bottom = -66.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.25, 1.25)
+pivot_offset = Vector2(27, 28)
+texture_normal = ExtResource("56_audrd")
+texture_pressed = ExtResource("57_r70my")
+
+[node name="HomeButton" type="TextureButton" parent="GameOverCanvas/PanelSetting"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -352.5
+offset_top = -122.5
+offset_right = -298.5
+offset_bottom = -66.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.25, 1.25)
+pivot_offset = Vector2(27, 28)
+texture_normal = ExtResource("58_7rrm8")
+texture_pressed = ExtResource("59_fpplj")
+
+[node name="Label" type="Label" parent="GameOverCanvas/PanelSetting"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -377.5
+offset_top = -281.5
+offset_right = -177.5
+offset_bottom = -257.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.2, 2.2)
+pivot_offset = Vector2(100, 12)
+theme = ExtResource("4_io83p")
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+text = "KEY_GAMEOVER"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[connection signal="pressed" from="CanvasLayer/HUD/TombolSelesai" to="." method="_on_tombol_selesai_pressed"]
+[connection signal="pressed" from="CanvasLayer/HUD/PauseButton" to="." method="_on_tombol_pause_pressed"]
+[connection signal="pressed" from="CanvasLayer/TouchScreenButton" to="." method="_on_tombol_selesai_pressed"]
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="MainMenu/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="MainMenu/SettingButton" to="MainMenu" method="_on_tombol_setting_pressed"]
+[connection signal="pressed" from="MainMenu/CreditsButton" to="MainMenu" method="_on_tombol_credits_pressed"]
+[connection signal="pressed" from="Setting/PanelSetting/IdButton" to="MainMenu" method="_on_id_button_pressed"]
+[connection signal="pressed" from="Setting/PanelSetting/EnButton" to="MainMenu" method="_on_en_button_pressed"]
+[connection signal="pressed" from="Setting/PanelSetting/SoundButton" to="MainMenu" method="_on_sound_button_pressed"]
+[connection signal="pressed" from="Setting/PanelSetting/MusicButton" to="MainMenu" method="_on_music_button_pressed"]
+[connection signal="pressed" from="Setting/SettingBackButton" to="MainMenu" method="_on_tombol_back_dari_setting_pressed"]
+[connection signal="pressed" from="Credits/SettingBackButton2" to="MainMenu" method="_on_tombol_back_dari_credits_pressed"]
+[connection signal="pressed" from="PauseCanvas/PanelSetting/ResumeBackButton3" to="." method="_on_tombol_resume_pressed"]
+[connection signal="pressed" from="PauseCanvas/PanelSetting/RestartButton" to="." method="_on_tombol_restart_pressed"]
+[connection signal="pressed" from="PauseCanvas/PanelSetting/HomeButton" to="." method="_on_tombol_home_pressed"]
+[connection signal="pressed" from="GameOverCanvas/PanelSetting/RestartButton" to="." method="_on_tombol_restart_pressed"]
+[connection signal="pressed" from="GameOverCanvas/PanelSetting/HomeButton" to="." method="_on_tombol_home_pressed"]
