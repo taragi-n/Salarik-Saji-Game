@@ -26,7 +26,6 @@
 - **Engine:** Godot Engine 2D
 - **Language:** GDScript
 - **Art & Visuals:** Custom 2D Assets / Pixel Art
-- **Audio & BGM:** FL Studio (Atmospheric Horror Soundscape)
 
 ---
 
